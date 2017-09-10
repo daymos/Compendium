@@ -13,4 +13,9 @@ const compose = (...args) => value => args.reverse().reduce((acc, fn) => fn(acc)
 // trace :: String -> Any
 const trace = message => val => { console.log(message, val); return val }
 
-
+module.exports = {
+    then: then, 
+    sequence: sequence, 
+    pipe: pipe, 
+    compose: compose,
+}
